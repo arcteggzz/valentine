@@ -1,0 +1,13 @@
+@use "../../assets/styles/" as *;
+
+.SplashPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .ppp {
+    font-family: "Affectionately Yours", Inter, sans-serif;
+  }
+}
