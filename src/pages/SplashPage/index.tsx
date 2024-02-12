@@ -23,7 +23,7 @@ const SplashPage = () => {
           </div>
 
           <div className={styles.second_message}>
-            <p className={styles.vals_text}>Toi aussi, mon bébé...</p>
+            <p className={styles.vals_text}>You too, my baby...</p>
             <img src={love_icon} alt="" className={styles.love_icon_message} />
           </div>
 
