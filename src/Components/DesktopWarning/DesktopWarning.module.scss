@@ -1,0 +1,28 @@
+@use "../../assets/styles/" as *;
+
+.DesktopWarning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("https://img.freepik.com/free-photo/fantasy-characters-experiencing-love_23-2151164518.jpg?auto=format&amp;w=2000&amp;t=st=1707646909~exp=1707647509~hmac=2dfafa3bbc2d305e6a9083428702d494919f43a623c1cdcbd80ea85efb4d1e72");
+  background-size: cover;
+  background-position: center;
+
+  @include sm() {
+    display: none;
+  }
+
+  .only_viewed {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 18px;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    color: white;
+  }
+}

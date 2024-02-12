@@ -1,1 +1,1 @@
-export { default as Navbar } from "./Navbar";
+export { default as DesktopWarning } from "./DesktopWarning";

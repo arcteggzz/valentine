@@ -1,13 +1,278 @@
 @use "../../assets/styles/" as *;
 
 .SplashPage {
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  justify-content: center;
-  align-items: center;
 
-  .ppp {
-    font-family: Inter, sans-serif;
+  .Mobile {
+    display: none;
+
+    @include sm() {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: $primary;
+
+      width: 100vw;
+      height: 100vh;
+
+      overflow-x: none;
+
+      position: relative;
+
+      .love_heart_one {
+        position: absolute;
+
+        top: 32px;
+        right: -300px;
+
+        width: 160px;
+        height: auto;
+
+        animation-name: slideInScale_one;
+        animation-duration: 0.75s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s;
+      }
+
+      .love_heart_two {
+        position: absolute;
+
+        top: 192px;
+        left: -300px;
+
+        width: 180px;
+        height: auto;
+
+        animation-name: slideInScale_two;
+        animation-duration: 0.75s;
+        animation-fill-mode: forwards;
+        animation-delay: 1.25s;
+      }
+
+      .first_message {
+        position: absolute;
+
+        top: 396px;
+        right: -340px;
+
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        background-color: white;
+        border-radius: 16px 0 16px 16px;
+        padding: 10px 20px;
+
+        animation-name: slideInScale_three;
+        animation-duration: 0.75s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+
+        .vals_text {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 18px;
+          text-align: center;
+          cursor: pointer;
+          text-decoration: none;
+          font-family: "Inter", sans-serif;
+          color: $primary;
+        }
+
+        .love_icon_message {
+          width: 24px;
+        }
+      }
+
+      .second_message {
+        position: absolute;
+
+        top: 460px;
+        left: -340px;
+
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        background-color: white;
+        border-radius: 0 16px 16px 16px;
+        padding: 10px 20px;
+
+        animation-name: slideInScale_four;
+        animation-duration: 0.75s;
+        animation-fill-mode: forwards;
+        animation-delay: 2.75s;
+
+        .vals_text {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 18px;
+          text-align: center;
+          cursor: pointer;
+          text-decoration: none;
+          font-family: "Inter", sans-serif;
+          color: $primary;
+        }
+
+        .love_icon_message {
+          width: 24px;
+        }
+      }
+
+      .link_container {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+
+        position: absolute;
+
+        bottom: -120px;
+        left: 0;
+
+        animation-name: slideInScale_five;
+        animation-duration: 1.25s;
+        animation-fill-mode: forwards;
+        animation-delay: 3.5s;
+
+        .continue_btn {
+          display: flex;
+          justify-content: center;
+          column-gap: 10px;
+          padding: 12px 14px;
+          border-radius: 8px;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          text-align: center;
+          cursor: pointer;
+          transition: all ease 0.2s;
+          text-decoration: none;
+          background: #ffffff;
+          font-family: "Inter", sans-serif;
+          color: $primary;
+          width: 90vw;
+
+          .contine_text {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: "Inter", sans-serif;
+            color: $primary;
+          }
+
+          .love_icon {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+
+      .footer_container {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+        padding: 10px 0;
+
+        .footer_text {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 16px;
+          font-family: "Shrikhand", serif;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideInScale_one {
+  0% {
+    opacity: 0.4;
+
+    top: 60px;
+    right: -300px;
+  }
+
+  100% {
+    opacity: 1;
+
+    top: 60px;
+    right: 20px;
+  }
+}
+
+@keyframes slideInScale_two {
+  0% {
+    opacity: 0.4;
+
+    top: 228px;
+    left: -300px;
+    transform: scaleX(-1);
+  }
+
+  100% {
+    opacity: 1;
+
+    top: 228px;
+    left: 20px;
+    transform: scaleX(-1);
+  }
+}
+
+@keyframes slideInScale_three {
+  0% {
+    opacity: 0.4;
+
+    top: 396px;
+    right: -340px;
+  }
+
+  100% {
+    opacity: 1;
+
+    top: 396px;
+    right: 20px;
+  }
+}
+
+@keyframes slideInScale_four {
+  0% {
+    opacity: 0.4;
+
+    top: 460px;
+    left: -340px;
+  }
+
+  100% {
+    opacity: 1;
+
+    top: 460px;
+    left: 20px;
+  }
+}
+
+@keyframes slideInScale_five {
+  0% {
+    opacity: 0;
+
+    bottom: -120px;
+    left: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+
+    bottom: 60px;
+    left: 0;
   }
 }

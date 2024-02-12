@@ -1,9 +1,158 @@
 @use "../../assets/styles/" as *;
 
 .HomePage {
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+
+  .Mobile {
+    display: none;
+
+    @include sm() {
+      background: white;
+      width: 100vw;
+      min-height: 100dvh;
+      overflow-x: none;
+
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      padding-top: 4vh;
+
+      .hero_image_container {
+        display: flex;
+        justify-content: center;
+
+        .herom_image {
+          width: 90vw;
+          height: auto;
+          z-index: 2;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+
+      .everyday_text {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        font-family: "Lato", sans-serif;
+        color: grey;
+        // margin-bottom: 6px;
+        margin-top: 20px;
+        padding: 0 0 0 16px;
+      }
+
+      .valentine_text {
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 24px;
+        cursor: pointer;
+        text-decoration: none;
+        font-family: "Lato", sans-serif;
+        color: $primary;
+        margin-bottom: 40px;
+        padding: 0 0 0 16px;
+      }
+
+      .question_text {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        cursor: pointer;
+        text-decoration: none;
+        font-family: "Shrikhand", serif;
+        color: $primary;
+        margin-bottom: 4px;
+        padding: 0 0 0 16px;
+      }
+
+      .mild_diss {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        font-family: "Lato", sans-serif;
+        color: grey;
+        // margin-bottom: 6px;
+        // margin-top: 20px;
+        padding: 0 0 0 16px;
+        font-style: italic;
+      }
+
+      .semi_circle_bg {
+        position: absolute;
+        height: 50vh;
+        width: 50vh;
+        border-radius: 50%;
+        background-color: #feeef3;
+        left: -20vw;
+        top: -50px;
+      }
+
+      .confetti_container {
+        position: absolute;
+        height: 100dvh;
+        width: 100vw;
+        background-color: transparent;
+        left: 0;
+        top: 0;
+      }
+
+      .button_container {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+
+        display: flex;
+        justify-content: end;
+
+        .yes_btn {
+          background: #ffa3cd;
+          width: 35vw;
+          height: 54px;
+          border-radius: 32px 0 0 0;
+          text-align: center;
+
+          border: none;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .yes_text {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: "Shrikhand", serif;
+            color: white;
+
+            animation-name: load_in_out;
+            animation-duration: 3.6s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes load_in_out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
