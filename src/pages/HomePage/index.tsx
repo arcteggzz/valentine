@@ -5,11 +5,21 @@ import heor_image_no from "../../assets/images/hero_image.png";
 import heor_image_yes from "../../assets/images/hero_image_two.png";
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+// import audio1 from "../../assets/sounds/really_trying.wav";
+import audio2 from "../../assets/sounds/careless_wisper.wav";
 
 const HomePage = () => {
   const { width, height } = useWindowSize();
   const [saidYes, setSaidYes] = useState(false);
+
+  const playAudio = () => {
+    new Audio(audio2).play();
+  };
+
+  useEffect(() => {
+    if (saidYes) playAudio();
+  }, [saidYes]);
 
   return (
     <AnimatedFadeInPage>
